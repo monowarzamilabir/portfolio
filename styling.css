@@ -78,6 +78,9 @@ table {
 
 }
 
+th{
+  font-weight: bold;
+}
 
 th,
 td {
