@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- this is internal CSS Styling
+    here * means for all element and margin and padding is set to 0 -->
+    <style>
+       
+        /* whenever we are calling by class name we have to put a dot before it */
+        .left {
+            font-size: 1.8rem;
+        }
+
+        .section1 {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+
+        }
+
+        .section1 div {
+
+            width: 30%;
+        }
+
+        .leftsection {
+
+            font-size: 2rem;
+            margin: 80px 0;
+        }
+
+        .rightsection {
+            width: 50px;
+        }
+
+        #typing-animation {
+            color: lavender;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(109, 39, 52);
+            height: 1.2px;
+            margin: 40px 80px;
+        }
+
+        .section2 {
+            max-width: 80vw;
+            /* margin doesnot work without the max-width */
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- nav is used for creating the navigating menu and it is typically user in header section -->
+        <nav>
+            <div class="left"><b>PORTFOLIO</b></div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <!-- dont forget the # -->
+                    <li><a href="#p_info">Personal Information</a></li>
+                    <li><a href="#u_link">Useful Links</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="leftsection">
+                <p>Hey! I am</p>
+                <p style="font-size: 3rem; color: rgb(19, 5, 63);"> <b>Monowar Zamil Abir</b></p>
+                <div id="typing-animation"></div>
+                <script>
+                    // Get the target element
+                    const typingElement = document.getElementById("typing-animation");
+
+                    // Define the text you want to type
+                    const textToType = "Welcome to my portfolio website.";
+
+                    // Initialize variables
+                    let charIndex = 0;
+                    const typingSpeed = 100; // Adjust this value to control typing speed (milliseconds per character)
+
+                    // Function to start the typing animation
+                    function startTypingAnimation() {
+                        const intervalId = setInterval(function () {
+                            // Add the next character to the typing element
+                            typingElement.textContent += textToType[charIndex];
+
+                            // Increment the character index
+                            charIndex++;
+
+                            // Check if we've typed the entire text
+                            if (charIndex === textToType.length) {
+                                clearInterval(intervalId); // Stop the animation when finished
+                            }
+                        }, typingSpeed);
+                    }
+
+                    // Start the typing animation when the page loads
+                    window.onload = startTypingAnimation;
+
+                </script>
+
+            </div>
+            <div class="rightsection">
+                <img src="profile2.png" alt="this is an image" style="width: 80%;">
+            </div>
+        </section>
+        <hr>
+        <section class="section2">
+            <h1><a name="p_info">Personal Information:</a></h1>
+            <p>
+                I am <b>Monowar Zamil Abir</b>, a dedicated student currently enrolled at <i>BRAC University</i>.
+                I originate from Gazipur. I am 21 years old and my date of birth is 24th January, 2002.
+                Currently I am pursuing my Bsc degree in <u>Computer Science</u>. To learn about some of my favourite
+                courses at <i>BRAC University</i> you can tap this link: <a href="#Favourite_courses">Favourite
+                    Courses</a>
+            </p>
+
+            <p>
+                My career aspirations lie in <span class="highlighting">web development</span> and <span
+                    class="highlighting">cybersecurity</span>,
+                where I aim to contribute to innovative solutions and make a meaningful impact.
+                I am enthusiastic about the opportunities that await me during my time at <i>BRAC University</i>
+                and beyond, as I continue to evolve academically and personally on this fulfilling journey.
+                Contact me at <a href="mailto:monowarzamilabir@gmail.com">monowarzamilabir@gmail.com</a>
+
+            </p>
+        </section>
+        <hr>
+
+        <section class="section">
+            <h1>Hobbies:</h1>
+            <p>I like to spend my leisure playing video games. My most favourite video game is <strong>PES
+                    mobile</strong>.
+                Learn more about the game <a href="https://www.konami.com/efootball/en/"
+                    target="_blank">PES_Official</a>.
+                <br>
+                <br>
+                <img src="https://www.konami.com/efootball/s/img/main_page_1.png?v=443" alt="Picture of a PES event"
+                    width="800" height="300">
+                <br>
+                <br>
+
+                My other interests include carrom and table tennis. I also like to watch movies a lot.
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="list">
+            <h1>Here is the list of my 10 favourite movies:</h1>
+
+
+            <ol type="i">
+                <li>3 Idioits</li>
+                <li>Theri</li>
+                <li>Iron Man (2008)</li>
+                <li>Iron Man 2 (2010)</li>
+                <li>The Avengers (2012)</li>
+                <li>Thor: Ragnarok (2017)</li>
+                <li>Avengers: Infinity War (2018)</li>
+                <li>Spider-Man: No Way Home (2021)</li>
+                <li>The Shawshank Redemption</li>
+                <li>Guardians of the Galaxy (2014)</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <a name="Favourite_courses" style="color: white; ">
+                <h1>Favourite courses:</h1>
+            </a>
+            <table>
+                <tr>
+                    <th>Course code</th>
+                    <th>Course title</th>
+                    <th>Course description</th>
+                </tr>
+                <tr>
+                    <td>CSE220</td>
+                    <td>Data Structures</td>
+                    <td>Introduction to widely used and effective methods of data organisation, focussing on data
+                        structures, their algorithms and the performance of these algorithms. Concepts and examples,
+                        elementary data objects, elementary data structures, arrays, lists, stacks, queues, graphs,
+                        trees. </td>
+                </tr>
+                <tr>
+                    <td>CSE221</td>
+                    <td>Algorithms</td>
+                    <td>The study of efficient algorithms and effective algorithm design techniques. Techniques for
+                        analysis of algorithms, Methods for the design of efficient algorithms :Divide and Conquer
+                        paradigm, Greedy method, Dynamic programming, Backtracking, Basic search and traversal
+                        techniques, Graph algorithms, Elementary parallel algorithms, Algebraic simplification and
+                        transformations, Lower bound theory, NP-hard and NP-complete problems.</td>
+                </tr>
+                <tr>
+                    <td>BUS201</td>
+                    <td>Business Communication</td>
+                    <td>This course focuses on the contemporary aspects of business communication in the work-place in
+                        particular, and businesses in general and will cover business writings such as business letters,
+                        memos, persuasive messages, reports, proposals and examine what sort of tone, language and style
+                        should be followed while doing so. The course also covers aspects of formal business
+                        presentations highlighting the language, dos and don’ts and the appropriate usage of visuals and
+                        multimedia in presentations. </td>
+                </tr>
+            </table>
+            <p>To learn about more BRAC University CSE courses, you can visit the following link: <a
+                    href="https://www.bracu.ac.bd/academics/departments/computer-science-and-engineering/bachelor-science-computer-science-and/cse-0"
+                    target="_blank">CSE course description</a> </p>
+        </section>
+
+        <hr>
+
+        <section class="list">
+
+            <h1>
+                <a name="u_link">Useful Links:</a>
+            </h1>
+            <ul style="list-style-type: circle;">
+                <li>
+                    The website link of CSE391 piazza: <a href="https://piazza.com/bracu.ac.bd/spring2023/cse391/"
+                        target="_blank">CSE391 piazza</a>
+                </li>
+                <li>
+                    The website of BRAC University: <a href="https://www.bracu.ac.bd/" target="_blank">BRAC
+                        University</a>
+                </li>
+            </ul>
+        </section>
+
+        <script class="time">
+            // Function to get the last modification date of the page
+            function getLastModifiedDate() {
+                var lastModified = new Date(document.lastModified);
+                return lastModified.toLocaleDateString() + " " + lastModified.toLocaleTimeString();
+            }
+
+            // Function to display the page location and last modification date at the bottom
+            function displayPageInfo() {
+                var pageInfo = document.createElement('div');
+                pageInfo.innerHTML = 'Page Location: ' + window.location.href + '<br>Last Modified Date: ' + getLastModifiedDate();
+                pageInfo.style.position = 'fixed';
+                pageInfo.style.bottom = '0';
+                pageInfo.style.left = '0';
+                pageInfo.style.backgroundColor = 'ffffff';
+                pageInfo.style.padding = '5px';
+                pageInfo.style.borderTop = '1px solid #ccc';
+                document.body.appendChild(pageInfo);
+            }
+
+            // Call the function to display page info when the page is fully loaded
+            window.addEventListener('load', displayPageInfo);
+        </script>
+        <div class="quote">
+
+           <p><b>
+                "Hope is a good thing, maybe the best of things,
+                and no good thing ever dies." - Andy Dufresne, <i>"The Shawshank Redemption"</i>
+            </b></p>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+
+
+</html>

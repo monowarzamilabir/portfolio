@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* here the color means the color of the font */
+body {
+  background-color: rgb(160, 96, 96);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  display: flex;
+  /* it splited the two div of nav */
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(169, 76, 93);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  /* removes bullet point */
+  list-style: none;
+  /* creates space. margin: top right bottom left margin: 0 20px;:
+
+This specifies a margin of 0 for the top and bottom sides of the element.
+It specifies a margin of 20 pixels for the right and left sides of the element.*/
+  margin: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: blanchedalmond;
+
+
+}
+
+a:hover {
+
+  color: rgb(1, 37, 69);
+  font-size: 1.1rem;
+
+}
+
+.quote {
+  background-color: rgb(136, 64, 64);
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.list {
+  list-style-position: inside;
+
+}
+
+.list:hover {
+  background-color: #7e343479;
+  color: black;
+  font-size: 1.1rem;
+}
+
+
+.highlighting {
+  background-color: yellow;
+  color: black;
+}
+
+table {
+  width: 80%;
+  /* that means 100% of the webpage */
+  border-collapse: collapse;
+
+}
+
+
+th,
+td {
+  border: 3px solid #644949;
+  padding: 5px;
+  text-align: center;
+
+}
+
+.section {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.list {
+  max-width: 80vw;
+  margin: auto;
+}
+
+/* using instead of marquee to create the same effect */
+
+.quote {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.quote p {
+  animation: scrollText 30s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
